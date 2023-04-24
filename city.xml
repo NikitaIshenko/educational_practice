@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<city>
+    <Building>
+        <id>5b6e4f52-05ad-4373-9ac3-612573213215</id>
+        <type_ownership>Частная</type_ownership>
+        <address>Лунная 34</address>
+        <date_comiss>23-08-25</date_comiss>
+        <number_floors>10</number_floors>
+        <name_owner>Nikita</name_owner>
+    </Building>
+    <Building>
+        <id>5b6e4f52-05ad-4373-9ac3-612573213213</id>
+        <type_ownership>Частная</type_ownership>
+        <address>Рабочая 34</address>
+        <date_comiss>23-08-25</date_comiss>
+        <number_floors>9</number_floors>
+        <name_owner>Nikita</name_owner>
+    </Building>
+    <Building>
+        <id>5b6e4f52-05ad-4373-9ac3-612573213211</id>
+        <type_ownership>Частная</type_ownership>
+        <address>Арбат 20</address>
+        <date_comiss>23-08-25</date_comiss>
+        <number_floors>17</number_floors>
+        <name_owner>Nikita</name_owner>
+    </Building>
+    <Building>
+        <id>dde9f21a-ca77-485c-9aae-255105dc2479</id>
+        <type_ownership>Общая</type_ownership>
+        <address>Школьная 1</address>
+        <date_comiss>23-08-22</date_comiss>
+        <number_floors>3</number_floors>
+        <name_owner>Директор</name_owner>
+    </Building>
+    <Building>
+        <id>bdf91e2d-5d6f-4d10-becc-fe210d664ca9</id>
+        <type_ownership>Общая</type_ownership>
+        <address>dsadasd 23</address>
+        <date_comiss>23-08-23</date_comiss>
+        <number_floors>29</number_floors>
+        <name_owner>Директор</name_owner>
+    </Building>
+</city>

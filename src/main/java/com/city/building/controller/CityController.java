@@ -2,6 +2,7 @@ package com.city.building.controller;
 
 import com.city.building.models.Building;
 import com.city.building.models.CityList;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import javax.xml.parsers.ParserConfigurationException;
@@ -27,6 +28,7 @@ public class CityController {
     }
 
     @PostMapping
+    @ResponseStatus(code = HttpStatus.CREATED)
     public Building create(@RequestBody Map<String, String> body) throws ParserConfigurationException {
         cityList.readXML();
         Building building = new Building(body.get("type_ownership"), body.get("address"), body.get("date_commiss"), Integer.parseInt(body.get("number_floors")), body.get("name_owner"));
@@ -43,6 +45,7 @@ public class CityController {
     }
 
     @PutMapping("{id}")
+    @ResponseStatus(code = HttpStatus.CREATED)
     public Building update(@PathVariable String id, @RequestBody Map<String, String> body) throws ParserConfigurationException {
         cityList.readXML();
         Building building = cityList.getBuildingById(id);

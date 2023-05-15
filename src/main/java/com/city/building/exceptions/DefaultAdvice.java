@@ -20,7 +20,7 @@ public class DefaultAdvice extends ResponseEntityExceptionHandler {
         Map<String, Object> body = new LinkedHashMap<>();
         body.put("Error", e.getMessage());
 
-        return new ResponseEntity<>(body, HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>(body, HttpStatus.NOT_ACCEPTABLE);
 
     }
 

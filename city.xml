@@ -40,4 +40,20 @@
         <number_floors>29</number_floors>
         <name_owner>Директор</name_owner>
     </Building>
+    <Building>
+        <id>98497d1c-5c82-4552-bb48-6a004f359354</id>
+        <type_ownership>Частная</type_ownership>
+        <address>ВВЫФвыф 34</address>
+        <date_comiss>23-08-25</date_comiss>
+        <number_floors>15</number_floors>
+        <name_owner>Nikita</name_owner>
+    </Building>
+    <Building>
+        <id>72e57e51-4411-4556-91d3-910edb0a2779</id>
+        <type_ownership>Частная</type_ownership>
+        <address>ВВЫФвыф 34</address>
+        <date_comiss>23-08-25</date_comiss>
+        <number_floors>25</number_floors>
+        <name_owner>Nikita</name_owner>
+    </Building>
 </city>

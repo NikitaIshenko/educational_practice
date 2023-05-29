@@ -12,7 +12,7 @@
 	<artifactId>building</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>building</name>
-	<description>City project practic</description>
+	<description>City project practice</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>

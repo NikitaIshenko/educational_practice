@@ -13,7 +13,7 @@ import java.util.Map;
 @RestController
 @RequestMapping("city")
 public class CityController {
-    CityList cityList = new CityList();
+    private final CityList cityList = new CityList();
 
     @GetMapping
     public List<Building> list(){
@@ -23,32 +23,32 @@ public class CityController {
 
     @GetMapping("{id}")
     public Building get_by_id(@PathVariable String id){
-        cityList.readXML();
-        return cityList.getBuildingById(id);
+        this.cityList.readXML();
+        return this.cityList.getBuildingById(id);
     }
 
     @PostMapping
     @ResponseStatus(code = HttpStatus.CREATED)
     public Building create(@RequestBody Map<String, String> body) throws ParserConfigurationException {
-        cityList.readXML();
+        this.cityList.readXML();
         Building building = new Building(body.get("type_ownership"), body.get("address"), body.get("date_commiss"), Integer.parseInt(body.get("number_floors")), body.get("name_owner"));
-        cityList.addBuilding(building);
-        cityList.saveXML();
+        this.cityList.addBuilding(building);
+        this.cityList.saveXML();
         return building;
     }
 
     @DeleteMapping("{id}")
     public void delete(@PathVariable String id) throws ParserConfigurationException {
-        cityList.readXML();
-        cityList.deleteBuilding(id);
-        cityList.saveXML();
+        this.cityList.readXML();
+        this.cityList.deleteBuilding(id);
+        this.cityList.saveXML();
     }
 
     @PutMapping("{id}")
     @ResponseStatus(code = HttpStatus.CREATED)
     public Building update(@PathVariable String id, @RequestBody Map<String, String> body) throws ParserConfigurationException {
-        cityList.readXML();
-        Building building = cityList.getBuildingById(id);
+        this.cityList.readXML();
+        Building building = this.cityList.getBuildingById(id);
         for(String key : body.keySet()){
             switch (key){
                 case "type_ownership" -> building.setType_ownership(body.get(key));
@@ -59,7 +59,7 @@ public class CityController {
             }
         }
 
-        cityList.saveXML();
+        this.cityList.saveXML();
         return building;
     }
 

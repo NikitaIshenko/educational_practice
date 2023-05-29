@@ -14,16 +14,16 @@ import java.util.Objects;
 @RestController
 @RequestMapping("info")
 public class InfoController {
-    CityList cityList = new CityList();
-    MathExpectation mathExpectation = new MathExpectation();
+    private final CityList cityList = new CityList();
+    private final MathExpectation mathExpectation = new MathExpectation();
 
 
     @GetMapping
     public LinkedHashMap<String, Object> info(HttpServletRequest request){
         LinkedHashMap<String, Object> info = new LinkedHashMap<String, Object>();
-        cityList.readXML();
-        int count_building = cityList.listCity().size();
-        double math_wait = mathExpectation.matAnalyze(cityList);
+        this.cityList.readXML();
+        int count_building = this.cityList.listCity().size();
+        double math_wait = this.mathExpectation.matAnalyze(this.cityList);
         String username = request.getHeader("username");
 
         if(!Objects.equals(username, null))

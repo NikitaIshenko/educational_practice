@@ -3,7 +3,6 @@ package com.city.building.models;
 import java.util.HashMap;
 
 public class MathExpectation {
-    CityList cityList = new CityList();
 
     private HashMap<Integer, Float> getPercentFloor(CityList cityList){
         HashMap<Integer, Float> percentFloor = new HashMap<>();
